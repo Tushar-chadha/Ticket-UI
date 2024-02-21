@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ticketticker/appConstants.dart';
+
 import 'package:ticketticker/bottomBar.dart';
+import 'package:ticketticker/utils/appConstants.dart';
 
 void main() {
   runApp(const MyApp());
