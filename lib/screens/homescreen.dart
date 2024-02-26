@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-
-import 'package:ticketticker/ticket_view.dart';
+import 'package:ticketticker/utils/appInfoList.dart';
+import 'package:ticketticker/utils/ticket_view.dart';
 import 'package:ticketticker/utils/appConstants.dart';
 import 'package:ticketticker/utils/hotelCard.dart';
 
@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0XFFeeedf2),
+      backgroundColor: Color(0XFFeeedf2),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -91,10 +91,11 @@ class HomeScreen extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: List.generate(
-                        5,
+                        info().ticketList.length,
                         (index) => Padding(
                           padding: const EdgeInsets.only(left: 10, right: 10),
-                          child: TicketView(),
+                          child:
+                              TicketView(tickeInfo: info().ticketList[index]),
                         ),
                       ),
                     ),
@@ -120,7 +121,14 @@ class HomeScreen extends StatelessWidget {
                 ),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
-                  child: HotelCard(),
+                  child: Row(
+                    children: info()
+                        .hotelList
+                        .map((map) => HotelCard(
+                              hotelInfo: map,
+                            ))
+                        .toList(),
+                  ),
                 )
               ],
             )
@@ -130,3 +138,10 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+// List.generate(
+//                         info().hotelList.length,
+//                         (index) => Padding(
+//                               padding: EdgeInsets.all(8.0),
+//                               child:
+//                                   HotelCard(hotelInfo: info().hotelList[index]),
+//                             )),
