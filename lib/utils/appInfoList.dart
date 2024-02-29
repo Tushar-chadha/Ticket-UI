@@ -37,5 +37,21 @@ class info {
       'departure_time': "09:00 AM",
       "number": 45
     },
+    {
+      'from': {'code': "PAR", 'name': "Paris"},
+      'to': {'code': "TOK", 'name': "Tokyo"},
+      'flying_time': '12H 15M',
+      'date': "15 MAY",
+      'departure_time': "10:30 AM",
+      "number": 78
+    },
+    {
+      'from': {'code': "SYD", 'name': "Sydney"},
+      'to': {'code': "RIO", 'name': "Rio"},
+      'flying_time': '14H 40M',
+      'date': "20 MAY",
+      'departure_time': "11:45 AM",
+      "number": 91
+    },
   ];
 }

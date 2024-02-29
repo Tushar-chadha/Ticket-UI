@@ -46,7 +46,7 @@ class TicketView extends StatelessWidget {
                     ],
                   ),
                   Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Icon(
                         FluentSystemIcons.ic_fluent_airplane_filled,

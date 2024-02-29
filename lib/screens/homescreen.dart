@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:ticketticker/utils/appInfoList.dart';
+import 'package:ticketticker/utils/appLayout.dart';
+import 'package:ticketticker/utils/containerBox.dart';
 import 'package:ticketticker/utils/ticket_view.dart';
 import 'package:ticketticker/utils/appConstants.dart';
 import 'package:ticketticker/utils/hotelCard.dart';
@@ -43,19 +45,8 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 10),
-                  width: double.infinity,
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(
-                      color: Colors.white60,
-                      width: 1.0,
-                    ),
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
-                  child: const TextField(
+                const ContainerBox(
+                  addWidget: TextField(
                     decoration: InputDecoration(
                       hintText: 'Search...',
                       border: InputBorder.none,
@@ -63,7 +54,9 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                Gap(20),
+                Gap(
+                  AppLayout.getHeight(20),
+                ),
                 Padding(
                   padding: const EdgeInsets.only(bottom: 20.0),
                   child: Row(
