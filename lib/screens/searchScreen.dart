@@ -55,7 +55,7 @@ class _SearchScreenState extends State<SearchScreen> {
                 Column(
                   children: [
                     Gap(AppLayout.getHeight(20)),
-                    customToggleButton(
+                    const customToggleButton(
                         firstLabel: "Airline Tickets",
                         secondLabel: "Hotel Tickets"),
                     Gap(
@@ -218,25 +218,28 @@ class _SearchScreenState extends State<SearchScreen> {
                                     ),
                                     Gap(AppLayout.getHeight(5)),
                                     RichText(
-                                        text: const TextSpan(children: [
+                                        text: TextSpan(children: [
                                       TextSpan(
                                         text: '🥰',
-                                        style: TextStyle(fontSize: 38),
+                                        style: TextStyle(
+                                            fontSize: AppLayout.getHeight(30)),
                                       ), // TextSpan
                                       TextSpan(
                                         text: '🥰',
-                                        style: TextStyle(fontSize: 50),
+                                        style: TextStyle(
+                                            fontSize: AppLayout.getHeight(50)),
                                       ), // TextSpan
                                       TextSpan(
                                         text: '🥰',
-                                        style: TextStyle(fontSize: 38),
+                                        style: TextStyle(
+                                            fontSize: AppLayout.getHeight(30)),
                                       ), // TextSpan
                                     ]) // TextSpan
                                         ) // RichText
                                   ],
                                 ),
                               ),
-                            ],
+                            ],  
                           ),
                         ),
                       ],

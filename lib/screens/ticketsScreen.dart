@@ -34,6 +34,7 @@ class TicketsScreen extends StatelessWidget {
                     AppLayout.getHeight(20),
                   ),
                   TicketView(
+                    isColor: false,
                     tickeInfo: info().ticketList[3],
                   )
                 ],
