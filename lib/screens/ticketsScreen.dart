@@ -22,6 +22,7 @@ class TicketsScreen extends StatelessWidget {
             ListView(
               padding: EdgeInsets.all(AppLayout.getHeight(15)),
               children: [
+                // header start
                 Text(
                   "Tickets",
                   style: Styles.headLineStyle1.copyWith(fontSize: 50),
@@ -33,13 +34,17 @@ class TicketsScreen extends StatelessWidget {
                     ),
                     const customToggleButton(
                         firstLabel: "Upcoming", secondLabel: "Previous"),
+                    // ^ header End ^
                     Gap(
                       AppLayout.getHeight(20),
                     ),
+
+                    // Top Ticket Section Start
                     TicketView(
                       isColor: false,
                       tickeInfo: ticketInfo,
                     ),
+                    // ^ Top Ticket Section End ^
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 15),
                       width: size,
@@ -47,6 +52,7 @@ class TicketsScreen extends StatelessWidget {
                           border: Border.symmetric(
                               horizontal: BorderSide(width: 0.2)),
                           color: Colors.white),
+                      //  Middle Ticket Section Start
                       child: Column(
                         children: [
                           Gap(AppLayout.getHeight(30)),
@@ -172,7 +178,9 @@ class TicketsScreen extends StatelessWidget {
                           Gap(AppLayout.getHeight(30)),
                         ],
                       ),
+                      // ^ Middle Ticket Section End ^
                     ),
+                    //  Barcode Section Start
                     Container(
                       width: size,
                       padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -204,14 +212,18 @@ class TicketsScreen extends StatelessWidget {
                         ),
                       ),
                     ),
+                    // ^ Barcode Section End ^
                   ],
                 ),
+                // Ticket Coloured Section Start
                 Padding(
                   padding: EdgeInsets.all(AppLayout.getHeight(20)),
                   child: TicketView(
                     tickeInfo: ticketInfo,
                   ),
                 ),
+                // ^ Ticket Coloured Section End ^
+                Gap(AppLayout.getHeight(10)),
               ],
             ),
           ],
