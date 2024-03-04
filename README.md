@@ -1,16 +1,2 @@
-# ticketticker
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Ticket-Ui
+Ticket-UI is a basic Flutter UI app designed to showcase a simple ticket booking interface. Users can browse available tickets, select the desired ticket quantity, and proceed to the checkout screen.
