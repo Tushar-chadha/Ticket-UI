@@ -124,15 +124,18 @@ class _SearchScreenState extends State<SearchScreen> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Container(
-                                height: AppLayout.getHeight(190),
-                                decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(15),
-                                  ),
-                                  image: DecorationImage(
-                                    fit: BoxFit.cover,
-                                    image: AssetImage("assets/images/sit.jpg"),
+                              Expanded(
+                                child: Container(
+                                  height: AppLayout.getHeight(190),
+                                  decoration: const BoxDecoration(
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(15),
+                                    ),
+                                    image: DecorationImage(
+                                      fit: BoxFit.cover,
+                                      image:
+                                          AssetImage("assets/images/sit.jpg"),
+                                    ),
                                   ),
                                 ),
                               ),

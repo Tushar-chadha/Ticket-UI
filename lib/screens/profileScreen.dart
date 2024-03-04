@@ -3,13 +3,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:ticketticker/utils/appConstants.dart';
 import 'package:ticketticker/utils/appLayout.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       backgroundColor: Styles.bgColor,
       body: SafeArea(
@@ -19,6 +19,7 @@ class ProfileScreen extends StatelessWidget {
             horizontal: AppLayout.getWidth(20),
           ),
           child: ListView(
+            shrinkWrap: true,
             padding: EdgeInsets.symmetric(),
             children: [
               Gap(
@@ -193,7 +194,30 @@ class ProfileScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     Gap(AppLayout.getHeight(30)),
-                    Container(), // add header
+                    Container(
+                      decoration: BoxDecoration(
+                        border: BorderDirectional(
+                            bottom: BorderSide(
+                                width: 0.1, color: Styles.lightGrey)),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Miles Accured",
+                            style: Styles.headLineStyle4
+                                .copyWith(color: Styles.lightGrey),
+                          ),
+                          Text(
+                            "23/01/2001",
+                            style: Styles.headLineStyle4
+                                .copyWith(color: Styles.lightGrey),
+                          )
+                        ],
+                      ),
+                    ),
+                    // add header
+                    Gap(AppLayout.getHeight(5)),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
